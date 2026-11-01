@@ -1,0 +1,98 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your DiabetesCare account and account settings.">
+    <title>Account Settings | DiabetesCare</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a class="logo" href="/dashboard.html">DiabetesCare</a>
+
+            <nav>
+                <a href="/dashboard.html">Dashboard</a>
+                <a href="/history.html">History</a>
+                <a href="/settings.html" aria-current="page">Settings</a>
+                <button type="button" id="logoutButton">Log Out</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="settings-page">
+        <section class="settings-card">
+            <p class="subtitle">YOUR ACCOUNT</p>
+            <h1>Account Settings</h1>
+            <p>View your account information and manage your account.</p>
+
+            <p id="message" role="status" aria-live="polite"></p>
+
+            <div id="profileDetails" hidden>
+                <p>
+                    <strong>Name:</strong>
+                    <span id="profileName"></span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="profileEmail"></span>
+                </p>
+
+                <p>
+                    <strong>Account Created:</strong>
+                    <span id="profileCreatedAt"></span>
+                </p>
+            </div>
+        </section>
+
+        <section class="settings-card danger-zone">
+            <h2>Delete Account</h2>
+            <p>
+                Permanently delete your account and all saved assessment
+                history associated with it. This action cannot be undone.
+            </p>
+
+            <form id="deleteAccountForm">
+                <label for="deletePassword">Confirm your current password</label>
+                <input
+                    type="password"
+                    id="deletePassword"
+                    name="password"
+                    placeholder="Enter your current password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <label class="confirmation-label">
+                    <input
+                        type="checkbox"
+                        id="confirmAccountDeletion"
+                        required
+                    >
+                    I understand that my account and saved assessments
+                    will be permanently deleted.
+                </label>
+
+                <button type="submit" id="deleteAccountButton" class="danger-button">
+                    Delete My Account
+                </button>
+
+                <p id="deleteAccountMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>DiabetesCare &copy; 2026. For educational purposes only.</p>
+    </footer>
+
+    <script src="/js/settings.js"></script>
+</body>
+
+</html>
+```

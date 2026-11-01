@@ -1,0 +1,15 @@
+
+node_modules
+ml-venv
+venv
+.venv
+.git
+.env
+.env.*
+!.env.example
+.vscode
+.idea
+__pycache__
+*.pyc
+npm-debug.log
+dataset

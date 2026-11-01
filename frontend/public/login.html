@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DiabetesCare</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a class="logo" href="/">DiabetesCare</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/register.html">Create Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-card">
+            <h1>Welcome back</h1>
+            <p>Log in to access your dashboard and saved assessments.</p>
+
+            <form id="loginForm">
+                <div>
+                    <label for="email">Email address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Log In</button>
+                <p id="loginMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="/register.html">Register here</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>DiabetesCare — Diabetes risk assessment project</p>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+</body>
+</html>

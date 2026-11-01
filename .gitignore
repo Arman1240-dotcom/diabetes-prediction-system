@@ -1,0 +1,26 @@
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node dependencies
+node_modules/
+
+# Python environments
+ml-venv/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Git and editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dataset (can be downloaded separately)
+dataset/

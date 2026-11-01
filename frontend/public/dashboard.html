@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Diabetes Prediction System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a class="logo" href="/dashboard.html">DiabetesCare</a>
+
+            <nav>
+                <a href="/dashboard.html">Dashboard</a>
+                <a href="/history.html">History</a>
+                <a href="/settings.html">Settings</a>
+                <button type="button" id="logoutButton">Log Out</button>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <h2 id="welcomeUser">Welcome</h2>
+            <p>Enter your information to prepare a diabetes risk assessment.</p>
+        </section>
+
+        <section>
+            <h2>Diabetes Risk Assessment</h2>
+
+            <p>
+                This form is for an educational risk-assessment project.
+                It does not provide a medical diagnosis.
+            </p>
+
+
+            <section class="dashboard-stats">
+                <h2>Your Overview</h2>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <h3>Total Assessments</h3>
+                        <p id="totalAssessments">0</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <h3>Low Risk Results</h3>
+                        <p id="lowRiskCount">0</p>
+                    </article>
+
+                    <article class="stat-card">
+                        <h3>High Risk Results</h3>
+                        <p id="highRiskCount">0</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="recent-assessments">
+                <h2>Recent Assessments</h2>
+
+                <p id="recentAssessmentsMessage">Loading your assessments...</p>
+
+                <div id="recentAssessmentsList"></div>
+
+                <a href="/history.html">View all assessment history</a>
+            </section>
+
+
+            <form id="predictionForm">
+                <label for="age">Age (years)</label>
+                <input type="number" id="age" name="age" min="1" max="120" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="bmi">BMI</label>
+                <input type="number" id="bmi" name="bmi" min="10" max="100" step="0.1" required>
+
+                <label for="hypertension">Hypertension</label>
+                <select id="hypertension" name="hypertension" required>
+                    <option value="">Select an option</option>
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+
+                <label for="heartDisease">Heart Disease</label>
+                <select id="heartDisease" name="heartDisease" required>
+                    <option value="">Select an option</option>
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+
+                <label for="smokingHistory">Smoking History</label>
+                <select id="smokingHistory" name="smokingHistory" required>
+                    <option value="">Select an option</option>
+                    <option value="never">Never</option>
+                    <option value="No Info">No Information</option>
+                    <option value="current">Current</option>
+                    <option value="former">Former</option>
+                    <option value="ever">Ever</option>
+                    <option value="not current">Not Current</option>
+                </select>
+
+                <label for="HbA1cLevel">HbA1c Level (%)</label>
+                <input type="number" id="HbA1cLevel" name="HbA1cLevel" min="0" max="20" step="0.1" required>
+
+                <label for="bloodGlucoseLevel">Blood Glucose Level (mg/dL)</label>
+                <input type="number" id="bloodGlucoseLevel" name="bloodGlucoseLevel" min="0" max="1000" step="1"
+                    required>
+
+                <button type="submit">Assess Risk</button>
+            </form>
+
+            <p id="predictionMessage" role="status"></p>
+        </section>
+
+        <section>
+            <h2>Assessment History</h2>
+            <a href="/history.html">View Previous Assessments</a>
+        </section>
+
+        <section>
+            <h2>Account Settings</h2>
+            <a href="/settings.html">Manage Settings</a>
+        </section>
+    </main>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>
